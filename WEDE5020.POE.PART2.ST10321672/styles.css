@@ -1,0 +1,314 @@
+/* ===== CSS Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 16px;
+}
+
+/* ===== Typography ===== */
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  background-color: #0077cc;
+  padding: 12px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Links inside nav */
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+/* Pseudo-classes */
+nav a:hover {
+  color: #ffdd57;          /* highlight on hover */
+  transform: scale(1.1);   /* subtle zoom */
+}
+
+nav a:active {
+  color: #ff8800;          /* orange when clicked */
+}
+
+nav a:visited {
+  color: #e0e0e0;          /* lighter for visited links */
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 20px 0;
+  text-align: center;
+  color: #0077cc;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #005fa3;
+}
+
+/* ===== Paragraphs ===== */
+p {
+  font-size: 1rem;
+  margin: 10px 20px;
+  color: #444;
+}
+
+/* ===== Lists ===== */
+ul {
+  margin: 10px 40px;
+  font-size: 1rem;
+  list-style-type: disc;
+}
+
+/* ===== Sections (visual style) ===== */
+section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 20px;
+  padding: 15px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Pseudo-class for hover effect on sections */
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Mobile (default styles usually work here) */
+@media (max-width: 480px) {
+  nav {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  nav a {
+    display: block;     /* stack links vertically */
+    margin: 8px 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  nav {
+    font-size: 1rem;
+  }
+
+  section {
+    max-width: 90%;
+    margin: 15px auto;
+  }
+}
+
+/* Small laptops */
+@media (max-width: 1024px) {
+  section {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  section {
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+}
+/* ===== Base Styles (Mobile First) ===== */
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  background-color: #0077cc;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  display: block;       /* Mobile: stack links */
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ffdd57;
+}
+
+/* Content Sections */
+section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 10px;
+  padding: 15px;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 15px 0;
+  color: #0077cc;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #005fa3;
+}
+
+/* ===== Tablet Styles (≥ 768px) ===== */
+@media (min-width: 768px) {
+  nav a {
+    display: inline-block;   /* Nav: horizontal */
+    margin: 0 15px;
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    max-width: 90%;
+    margin: 15px auto;
+    font-size: 1.05rem;
+  }
+}
+
+/* ===== Small Laptop Styles (≥ 1024px) ===== */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  /* Multi-column layout */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* content + sidebar */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+
+  section {
+    margin: 0; /* grid handles spacing */
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* ===== Large Desktop Styles (≥ 1200px) ===== */
+@media (min-width: 1200px) {
+  nav {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  main {
+    grid-template-columns: 3fr 1fr; /* wider content area */
+    gap: 30px;
+    max-width: 1200px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+/* Hamburger icon hidden on larger screens */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Mobile menu (hidden by default) */
+.menu {
+  display: none;
+  flex-direction: column;
+}
+
+.menu a {
+  padding: 10px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* When checked, show the menu */
+#menu-toggle:checked + .menu-icon + .menu {
+  display: flex;
+}
+
+/* Tablet and up: show normal nav */
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none; /* Hide hamburger */
+  }
+
+  .menu {
+    display: flex !important; /* Always visible */
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .menu a {
+    border: none;
+    margin: 0 15px;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+  margin: 1em 0;
+  display: block;
+}
