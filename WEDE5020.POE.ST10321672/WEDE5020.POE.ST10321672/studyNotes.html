@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Study notes and stored information to help your learning.">
+  <meta name="keywords" content="notes, study, writing, learning">
+  <title>Notes Section</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="quizzes.html">Quiz</a></li>
+      <li><a href="studyNotes.html">Notes</a></li>
+      <li><a href="enquiries.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <h1>Notes Section</h1>
+      <p>This is where you will write and view your notes in the next part of the project.</p>
+
+      <img src="_Images/study.jpg"
+           alt="Study materials representing note-taking"
+           class="hero-img"
+           loading="lazy">
+    </section>
+
+    <!-- Search Filter -->
+    <section>
+      <h2>Search Notes</h2>
+      <input type="text" id="search" placeholder="Search notes...">
+
+      <ul id="notes-list">
+        <li>HTML Basics</li>
+        <li>CSS Styling</li>
+        <li>JavaScript Fundamentals</li>
+        <li>Responsive Design</li>
+      </ul>
+    </section>
+
+    <!-- Accordion -->
+    <section>
+      <h2>Quick Study Topics</h2>
+
+      <button class="accordion-btn">HTML Basics</button>
+      <div class="accordion-content">
+        <p>HTML uses tags to structure content on web pages.</p>
+      </div>
+
+      <button class="accordion-btn">CSS Styling</button>
+      <div class="accordion-content">
+        <p>CSS controls layout, colours, spacing, and responsiveness.</p>
+      </div>
+
+      <button class="accordion-btn">JavaScript Basics</button>
+      <div class="accordion-content">
+        <p>JavaScript adds interactivity and dynamic behaviour to web pages.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
